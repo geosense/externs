@@ -2,16 +2,29 @@
  * @fileoverview Externs for JSTS
  * @externs
  */
+
 var jsts = {};
 
+/** 
+ * @const
+ */
 jsts.io = {};
 
+/** 
+ * @const
+ */
 jsts.geom = {};
 
 /**
- * @construtor
+ * Geometry Constructor
+ * @constructor
  */
-jsts.geom.Geometry = function () {};
+jsts.geom.Geometry = function() {};
+
+/**
+ * @type {string}
+ */
+jsts.geom.Geometry.name = 'jsts.geom.Geometry';
 
 /**
  * @param {number} distance
@@ -47,6 +60,7 @@ jsts.geom.Geometry.prototype.overlaps = function (g) {};
 jsts.geom.Geometry.prototype.within = function (g) {};
 
 /**
+ * Reader constructor
  * @contructor
  */
 jsts.io.GeoJSONReader = function() {};
@@ -55,9 +69,10 @@ jsts.io.GeoJSONReader = function() {};
  * @param {Object} geoJson
  * @return {jsts.geom.Geometry}
  */
-jsts.io.GeoJSONWriter.prototype.read = function(geoJson) {};
+jsts.io.GeoJSONReader.prototype.read = function(geoJson) {};
 
 /**
+ * writer constructor
  * @contructor
  */
 jsts.io.GeoJSONWriter = function() {};
